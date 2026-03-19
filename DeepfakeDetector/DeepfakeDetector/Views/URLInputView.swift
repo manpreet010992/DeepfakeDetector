@@ -34,6 +34,11 @@ struct URLInputView: View {
                         .foregroundColor(.subtitleText)
                         .multilineTextAlignment(.center)
 
+                    Text("YouTube, TikTok, Instagram & other streaming\nlinks are not supported. Download the video\nfirst, then upload from your photo library.")
+                        .font(.caption)
+                        .foregroundColor(.verdictInconclusive)
+                        .multilineTextAlignment(.center)
+
                     // URL Input Field
                     VStack(alignment: .leading, spacing: 8) {
                         HStack {
