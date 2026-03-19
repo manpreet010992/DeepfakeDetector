@@ -11,6 +11,7 @@ final class VideoDownloader {
 
         guard let httpResponse = response as? HTTPURLResponse,
               (200...299).contains(httpResponse.statusCode) else {
+            try? FileManager.default.removeItem(at: tempURL)
             throw VideoDownloadError.downloadFailed
         }
 

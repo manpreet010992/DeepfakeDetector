@@ -83,6 +83,7 @@ final class VideoAnalysisViewModel: ObservableObject {
                 .appendingPathComponent(UUID().uuidString)
                 .appendingPathExtension("mp4")
             try videoData.write(to: tempURL)
+            downloadedFileURL = tempURL
 
             // Generate thumbnail
             await generateThumbnail(from: tempURL)
